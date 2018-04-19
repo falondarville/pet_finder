@@ -1,7 +1,16 @@
-// npm packages
-const express = require("express");
+const express = require('express');
+const bodyParser = require('body-parser');
+const path = require('path');
+const routes = require(path.join(__dirname, 'routing', 'htmlRoutes'));
+
 const app = express();
+const PORT = process.env.PORT || 3306;
 
-const bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({extended: true}));
 
-const path = require("path");
+app.listen(PORT, function(){
+    console.log(`The server is up and running on port: ${PORT} .`);
+});
+
+
+
