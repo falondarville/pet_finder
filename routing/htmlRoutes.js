@@ -5,12 +5,12 @@ const router = express.Router();
 
 console.log('hello!');
 
-// ROUTE TO SURVEY HTML DOC	
+// route to survery html doc	
 router.get('/survey', function(request, response){
 	response.sendFile(path.join(__dirname, '..', 'public', 'survey.html'));
 });
 
-// CATCH ALL ROUTE TO HOMEPAGE
+// catch all directs to the homepage
 router.get('*', function(request, response){
 	response.sendFile(path.join(__dirname, '..', 'public', 'home.html'));
 });
