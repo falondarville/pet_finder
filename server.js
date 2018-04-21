@@ -10,6 +10,7 @@ const PORT = process.env.PORT || 3306;
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+app.use('/assets',express.static('assets'));
 app.use('/api', apiRoutes);
 app.use('/', routes);
 
