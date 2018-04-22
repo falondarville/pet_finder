@@ -28,8 +28,10 @@
 	background-color: #99cc99;
 }
 
-.btn-survey:hover {
-	background-color: #40ad40;
+.btn-survey:active,
+.btn-survey:hover,
+.btn-survey:focus {
+  background-color: #99cc99 !important;
 }
 
 .white-text {
