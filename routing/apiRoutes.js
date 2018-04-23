@@ -9,8 +9,7 @@ router.get('/friends', function(request, response){
 	return response.json(friends);
 });
 
-// post route that handles incoming survey results
-// this route handles compatibility logic
+// post route that handles incoming survey results and compatibility logic
 router.post('/friends', function(request, response){
 	var name = request.body.name;
 	var scores = request.body.scores;
@@ -31,10 +30,6 @@ router.post('/friends', function(request, response){
 	// };
 
 	return response.json(bestMatch);
-	// var a = friends array from friends.js
-	// var b = array compiled through the quiz taken by the user
-	// calculate compatibility here to the friends.js file
-
 });
 
 module.exports = router;
