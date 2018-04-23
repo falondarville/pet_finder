@@ -16,18 +16,25 @@ router.post('/friends', function(request, response){
 	var scores = request.body.scores;
 	var bestMatch = {};
 
-	for(var i = 0; i < friends.length; i++){
-		console.log(friends[i]);
+	// for(var i = 0; i < scores.length; i++) {
+	// 	scores[i] = parseInt(scores[i]);
+	// }
 
-	};
+	// var difference = function (a, b) { 
+	// 	return Math.abs(a - b);
+	// };
+
+	// for(var i = 0; i < friends.length; i++){
+
+	// 	var result = difference(friends[i].scores, scores);
+	// 	console.log(result);
+	// };
 
 	return response.json(bestMatch);
 	// var a = friends array from friends.js
 	// var b = array compiled through the quiz taken by the user
 	// calculate compatibility here to the friends.js file
-	// var difference = function (a, b) { 
-	// 	return Math.abs(a - b);
-	// };
+
 });
 
 module.exports = router;
