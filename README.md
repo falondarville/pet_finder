@@ -6,7 +6,7 @@ The front end was created already, but I added styling to the button on the home
 
 The application was deployed to Heroku and can be viewed at the following URL:
 
-![alt-text](https://obscure-brushlands-56604.herokuapp.com/)
+[Heroku App](https://obscure-brushlands-56604.herokuapp.com/)
 
 ## Technologies Used
 
