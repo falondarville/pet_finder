@@ -8,6 +8,8 @@ The application was deployed to Heroku and can be viewed at the following URL:
 
 [Heroku App](https://obscure-brushlands-56604.herokuapp.com/)
 
+[Demo Video](assets/images/petFinder.mp4)
+
 ## Technologies Used
 
 JavaScript, HTML/CSS, BootStrap, Node npm packages Express and path
