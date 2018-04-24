@@ -3,8 +3,6 @@ const path = require('path');
 
 const router = express.Router();
 
-console.log('hello!');
-
 // route to survey html doc	
 router.get('/survey', function(request, response){
 	response.sendFile(path.join(__dirname, '..', 'public', 'survey.html'));

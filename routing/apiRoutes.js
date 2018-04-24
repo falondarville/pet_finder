@@ -15,19 +15,22 @@ router.post('/friends', function(request, response){
 	var scores = request.body.scores;
 	var bestMatch = {};
 
-	// for(var i = 0; i < scores.length; i++) {
-	// 	scores[i] = parseInt(scores[i]);
-	// }
+	var difference = function (a, b) { 
+		return Math.abs(a - b);
+	};
 
-	// var difference = function (a, b) { 
-	// 	return Math.abs(a - b);
-	// };
+	for(var j = 0; j < friends.length; j++){
+		var friend = friends[j];
+		var friendScore = friends[j].scores;
+		var differenceBetween = 0;
 
-	// for(var i = 0; i < friends.length; i++){
-
-	// 	var result = difference(friends[i].scores, scores);
-	// 	console.log(result);
-	// };
+		for(var i = 0; i < friendScore.length; i++){
+			differenceBetween += difference(friendScore[i], scores[i]);
+		}
+		console.log(differenceBetween);
+		// smallest number is the match
+		// is two smallest numbers, choose one at random
+	}
 
 	return response.json(bestMatch);
 });
