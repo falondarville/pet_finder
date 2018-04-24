@@ -47,3 +47,7 @@
   box-shadow: none;
   top: 6px;
 }
+
+#match-img {
+  max-height: 400px;
+}

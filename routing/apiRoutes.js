@@ -14,6 +14,7 @@ router.post('/friends', function(request, response){
 	var name = request.body.name;
 	var scores = request.body.scores;
 	var bestMatch = {};
+	var differenceArray =[];
 
 	var difference = function (a, b) { 
 		return Math.abs(a - b);
@@ -29,14 +30,19 @@ router.post('/friends', function(request, response){
 		}
 		console.log(differenceBetween);
 		friends[j].differenceBetween = differenceBetween;
-
 		
-		// smallest number is the match
-		// is two smallest numbers, choose one at random
+		differenceArray.push(differenceBetween);
+
 	}
-
 	console.log(friends);
+	var bestDifference = Math.min(...differenceArray);
 
+	for(var r = 0; r < friends.length; r++){
+		if(friends[r].differenceBetween == bestDifference){
+			bestMatch = friends[r];
+			break;
+		}
+	}
 	return response.json(bestMatch);
 });
 
